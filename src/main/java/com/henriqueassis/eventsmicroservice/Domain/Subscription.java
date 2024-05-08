@@ -3,6 +3,8 @@ package com.henriqueassis.eventsmicroservice.Domain;
 import jakarta.persistence.*;
 import lombok.*;
 
+import java.util.UUID;
+
 @Entity(name = "subscription")
 @Table(name = "subscription")
 @Getter
@@ -14,7 +16,7 @@ public class Subscription {
 
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
-    private Long id;
+    private UUID id;
 
     @ManyToOne
     private Event event;
